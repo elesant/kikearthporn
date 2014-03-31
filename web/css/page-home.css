@@ -1,7 +1,7 @@
 .home-page {}
 
 .home-text {
-    font-family: 'Helvetica Neue', 'Roboto', 'Open Sans';
+    font-family: 'Helvetica Neue', 'Roboto';
     font-weight: 300;
     text-align: center;
     font-size: 30px;
@@ -11,9 +11,17 @@
 .home-page .text-box {
     padding: 20px;
 }
+.home-page .app-section{
+    border-bottom: 2px solid rgba(0, 0, 0, 0.21);
+}
 
 .thumbnail {
     height: 50px;
     width: 50px;
     padding: 1px;
+    margin: 1px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: left;
+
 }

@@ -1,0 +1,9 @@
+.viewer-page .app-topbar .app-button.kik {
+    display: block;
+    margin-top: 13px;
+    margin-right: 5px;
+    height: 18px;
+    width: 30px;
+    background-image: url(/img/kik-button.png?inline=1);
+    -webkit-background-size: 100%;
+}

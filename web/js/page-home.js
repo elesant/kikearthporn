@@ -1,11 +1,18 @@
 App.populator('home', function (page) {
   var urls = [];
+  var num_images = 20;
+  var index = 0;
 
-  getData();
+  var setDivSize = function (index){
+    page.querySelector('#main-section').style.height = ((Math.ceil(index/5) * 54)).toString() + 'px';
+  };
 
-  function getData() {
-    var index = 0;
-    $.getJSON('http://reddit.com/r/EarthPorn/.json?jsonp=?&limit=20', function (data) {
+  getData(num_images, setDivSize);
+
+
+  function getData(num, callback) {
+
+    $.getJSON('http://reddit.com/r/EarthPorn/.json?jsonp=?&limit='+num, function (data) {
       // First items returned in data isn't useful
       for (var i = 1; i < data.data.children.length; i++) {
         var item = data.data.children[i];
@@ -23,13 +30,22 @@ App.populator('home', function (page) {
           }
         }
       }
+      callback(index);
     });
   }
 
 
   function renderThumbnail(thumbnail, index) {
-    $('<img/>').attr('class', 'thumbnail').attr('src', thumbnail).attr('id', 'image-' + index).appendTo('#images');
-    $('#image-' + index).click(function () {
+    var id = 'image-' + index;
+    var lookup = '#'+id;
+    $('<div/>', {
+      class: 'thumbnail',
+      id: id,
+      height: "50",
+      width: "50"
+    }).appendTo('#images');
+    $(lookup).css('background-image', 'url(' + thumbnail + ')');
+    $(lookup).click(function () {
       App.load('viewer', {
         image: urls[index],
         index: index,
