@@ -3,7 +3,7 @@
  */
 
 App.populator('viewer', function(page, data){
-  console.log(JSON.stringify(data));
+
   var photoViewer = new PhotoViewer(page, data.images, {
     automaticTitles : false ,
     autoHideTitle   : true ,
