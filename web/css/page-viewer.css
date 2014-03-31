@@ -1,9 +1,17 @@
-.viewer-page .app-topbar .app-button.kik {
+.app-ios .viewer-page .app-topbar .app-button.kik {
     display: block;
     margin-top: 13px;
-    margin-right: 5px;
+    margin-right: 10px;
     height: 18px;
-    width: 30px;
-    background-image: url(/img/kik-button.png?inline=1);
-    -webkit-background-size: 100%;
+    background-image: url(/img/kik_it_iOS_white.png?inline=1);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.app-android .my-widget {
+    margin-top: 12px;
+    margin-right: 10px;
+    height: 24px;
+    background-image: url(/img/kik_it_android_white.png?inline=1);
 }
