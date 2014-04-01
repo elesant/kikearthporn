@@ -47,6 +47,7 @@ App.populator('home', function (page) {
     $(lookup).css('background-image', 'url(' + thumbnail + ')');
     $(lookup).click(function () {
       App.load('viewer', {
+        message: false,
         image: urls[index],
         index: index,
         images: urls

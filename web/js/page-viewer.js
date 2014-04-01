@@ -3,6 +3,11 @@
  */
 
 App.populator('viewer', function (page, data) {
+  if(data.message){
+    page.querySelector('#back').addEventListener('click', function () {
+      App.load('home');
+    });
+  } else {}
 
   var photoViewer = new PhotoViewer(page, data.images, {
     automaticTitles: false,
@@ -16,6 +21,7 @@ App.populator('viewer', function (page, data) {
       App.saveStack();
     });
   }
+
 
   page.querySelector('#save').addEventListener('click', function() {
     var image = data.images ? data.images[data.index] : data.image;
@@ -37,7 +43,7 @@ App.populator('viewer', function (page, data) {
         pic: image, // optional
         big: true, // optional
         noForward: true, // optional
-        data: { some: 'json' }         // optional
+        data: { image: image }         // optional
       });
     }
   });
