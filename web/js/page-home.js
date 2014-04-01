@@ -1,6 +1,6 @@
 App.populator('home', function (page) {
   var urls = [];
-  var num_images = 20;
+  var num_images = 50;
   var index = 0;
 
   var setDivSize = function (index){
