@@ -29,7 +29,7 @@ App.populator('viewer', function (page, data) {
     });
   }
 
-
+  new Clickable(page.querySelector('#save'));
   page.querySelector('#save').addEventListener('click', function() {
     var image = data.images ? data.images[data.index] : data.image;
     kik.photo.saveToGallery(image, function (status) {
@@ -41,16 +41,15 @@ App.populator('viewer', function (page, data) {
     });
   });
 
+  new Clickable(page.querySelector('#share'));
   page.querySelector('#share').addEventListener('click', function () {
     var image = data.images ? data.images[data.index] : data.image;
     if (kik.send) {
       kik.send({
         title: 'Earth Porn',
-        text: 'Like Youve Never seen her before',
-        pic: image, // optional
-        big: true, // optional
-        noForward: true, // optional
-        data: { image: image }         // optional
+        pic: image,
+        big: false,
+        data: { image: image }
       });
     }
   });

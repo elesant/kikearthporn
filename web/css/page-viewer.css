@@ -19,24 +19,21 @@
 .app-ios .viewer-page .app-topbar .app-button.save {
     right: 40px;
     display: block;
-    margin-top: 13px;
-    margin-right: 10px;
+    margin: 13px 20px 10px 10px;
     height: 20px;
     background-image: url(/img/save.png?inline=1);
     background-repeat: no-repeat;
     background-size: cover;
-}
 }
 
 
 .app-android .viewer-page .app-topbar .app-button.save {
     right: 40px;
     display: block;
-    margin-top: 13px;
-    margin-right: 10px;
+    margin: 13px 10px 10px 10px;
     height: 20px;
     background-image: url(/img/save.png?inline=1);
     background-repeat: no-repeat;
     background-size: cover;
 }
-}
+
