@@ -14,6 +14,8 @@
     margin-right: 10px;
     height: 24px;
     background-image: url(/img/kik_it_android_white.png?inline=1);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .app-ios .viewer-page .app-topbar .app-button.save {

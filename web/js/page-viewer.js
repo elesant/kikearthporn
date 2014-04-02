@@ -48,7 +48,7 @@ App.populator('viewer', function (page, data) {
       kik.send({
         title: 'Earth Porn',
         pic: image,
-        big: false,
+        big: true,
         data: { image: image }
       });
     }

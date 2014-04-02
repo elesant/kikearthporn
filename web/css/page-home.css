@@ -23,5 +23,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     float: left;
+}
 
+.app-android .thumbnail {
+    padding: 2px;
 }
