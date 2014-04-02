@@ -3,11 +3,18 @@
  */
 
 App.populator('viewer', function (page, data) {
+  kik.browser.setOrientationLock('free');
+
   if(data.message){
     page.querySelector('#back').addEventListener('click', function () {
       App.load('home');
     });
-  } else {}
+  } else {
+    page.querySelector('#back').addEventListener('click', function () {
+      App.back();
+      setTimeout(kik.browser.setOrientationLock('portrait'),1000);
+    });
+  }
 
   var photoViewer = new PhotoViewer(page, data.images, {
     automaticTitles: false,

@@ -10,10 +10,6 @@
       index: 0
     })
   } else {
-    try {
-      App.restore();
-    } catch (err) {
       App.load('home');
-    }
   }
 })(App);
