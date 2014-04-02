@@ -1,7 +1,7 @@
 App.populator('home', function (page) {
   kik.browser.setOrientationLock('portrait');
   var urls = [];
-  var num_images = 100;
+  var num_images = 40;
   var index = 0;
 
   var setDivSize = function (index){
